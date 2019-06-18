@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Le Blog/Saúde</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="noticia.js"></script>
+</head>
+<body>
+        <header >
+                <a href="index.html"><h1>Le Blog</h1></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Receita.html">Receitas</a></li>
+                    <li><a class="active" href="saude.html">Saúde</a></li>
+                    <li><a href="#">==</a></li>
+                </ul>
+            </header>
+
+            <div id="lista-noticia"></div>
+
+            <center><script>
+                    var notic = '';
+                    for (i = 0; i < db.dados.length; i++) {
+                      notic = `<p><br> ${db.dados[0].titulo} <br><br> <img src="${db.dados[0].imagem}"> <br> <br> ${db.dados[0].data} <br><br> ${db.dados[0].descricao}  &nbsp; <a href="maca.html" target="_blank" class="leia-mais">Leia mais...</a> <br></p><hr>`;
+                    }
+                    document.getElementById('lista-noticia').innerHTML = notic;
+                  </script> </center>
+</body>
+</html>
